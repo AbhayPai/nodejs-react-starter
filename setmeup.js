@@ -6,7 +6,10 @@ module.exports = function(config) {
 
     this.alias = {
         SassPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/scss/'),
+        StatesPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/States'),
         ModulesPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/Modules'),
+        ActionsPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/Actions'),
+        ReducersPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/Reducers'),
         ConfigPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/Configuration'),
         ComponentsPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/Components'),
     };

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Post from 'ComponentsPath/Post/Index';
+import Redux from 'ComponentsPath/Redux/Index';
 import NotFound from 'ComponentsPath/NotFound/NotFound';
 
 const Routes = () => {
@@ -11,6 +12,13 @@ const Routes = () => {
             title: 'Home',
             render: true,
             pathComponent: () => <Post />
+        },
+        {
+            path: '/redux',
+            exact: true,
+            title: 'Redux',
+            render: true,
+            pathComponent: () => <Redux />
         },
         {
             path:  '/user/:id',

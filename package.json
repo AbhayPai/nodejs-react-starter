@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "dev": "webpack --colors --hide-modules --mode=development",
+    "package": "webpack --colors --hide-modules --mode=production",
+    "dev": "webpack --colors --hide-modules --watch --mode=development",
     "localstart": "webpack --colors --hide-modules --mode=production && node index"
   },
   "repository": {
@@ -37,7 +38,9 @@
     "popper.js": "^1.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
