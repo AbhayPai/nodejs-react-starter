@@ -1,0 +1,38 @@
+$image-ap-logo: './../../images/ap-logo.jpg';
+
+body {
+    min-width: 416px !important;
+    // background-image: url($image-ap-logo);
+}
+
+a,
+.post-summaries
+.readmore,
+.loadmore {
+    cursor: pointer;
+}
+
+.post-summaries {
+    position: relative;
+
+    &-title {
+        font-size: 2.5rem;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &:hover {
+        border: 1px dotted !important;
+    }
+
+    .readmore:hover,
+    .loadmore:hover {
+        color: #007bff !important;
+    }
+}
+
+.post-updated {
+    cursor: not-allowed !important;
+}
