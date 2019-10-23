@@ -76,8 +76,10 @@ module.exports = {
         }),
 
         new CleanWebpackPlugin({
+            dry: false,
             verbose:  true,
             cleanStaleWebpackAssets: false,
+            dangerouslyAllowCleanPatternsOutsideProject: true,
             cleanOnceBeforeBuildPatterns: [
                 'public/css/**/*',
                 'public/js/**/*',

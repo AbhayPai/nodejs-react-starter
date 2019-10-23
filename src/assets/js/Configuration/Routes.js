@@ -2,6 +2,7 @@ import React from 'react';
 
 import Post from 'ComponentsPath/Post/Index';
 import Redux from 'ComponentsPath/Redux/Index';
+import Databinding from 'ComponentsPath/Databinding/Index';
 import NotFound from 'ComponentsPath/NotFound/NotFound';
 
 const Routes = () => {
@@ -14,11 +15,18 @@ const Routes = () => {
             pathComponent: () => <Post />
         },
         {
-            path: '/redux',
+            path: '/react-redux',
             exact: true,
-            title: 'Redux',
+            title: 'React Redux',
             render: true,
             pathComponent: () => <Redux />
+        },
+        {
+            path: '/databinding',
+            exact: true,
+            title: 'Data Binding',
+            render: true,
+            pathComponent: () => <Databinding />
         },
         {
             path:  '/user/:id',
