@@ -5,8 +5,8 @@ module.exports = function(config) {
     };
 
     this.alias = {
-        SassPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/scss/'),
         ViewsPath: config.Path.resolve(config.Webpack_DIR, 'src/templates'),
+        SassPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/scss/'),
         StatesPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/States'),
         ModulesPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/Modules'),
         ActionsPath: config.Path.resolve(config.Webpack_DIR, 'src/assets/js/Actions'),
@@ -19,6 +19,10 @@ module.exports = function(config) {
         {
             to: config.Path.join(config.Webpack_DIR, 'public', 'images'),
             from: config.Path.join(config.Webpack_DIR, 'src', 'assets', 'images')
+        },
+        {
+            to: config.Path.join(config.Webpack_DIR, 'public', 'js'),
+            from: config.Path.join(config.Webpack_DIR, 'src', 'assets', 'js', 'Vendors', 'jquery.min.js')
         }
     ];
 
@@ -38,7 +42,7 @@ module.exports = function(config) {
                 template: config.Path.join(
                     config.Webpack_DIR,
                     'src', 'templates', 'html',
-                    'blogs.html'
+                    'index.html'
                 ),
                 filename: config.Path.join(
                     config.Webpack_DIR,
@@ -51,6 +55,7 @@ module.exports = function(config) {
                         '/css/index.' + config.CustomTimeHash + '.css'
                     ],
                     js: [
+                        '/js/jquery.min.js',
                         '/js/vendor.' + config.CustomTimeHash + '.js',
                         '/js/index.' + config.CustomTimeHash + '.js'
                     ]

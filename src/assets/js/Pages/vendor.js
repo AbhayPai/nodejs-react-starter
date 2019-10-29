@@ -3,4 +3,4 @@
  */
 require('SassPath/pages/vendor.scss');
 
-import 'bootstrap/js/dist/collapse';
+import 'bootstrap/js/collapse';

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "nodemon index",
     "package": "webpack --colors --hide-modules --mode=production",
     "dev": "webpack --colors --hide-modules --watch --mode=development",
     "localstart": "webpack --colors --hide-modules --mode=production && node index"
@@ -33,9 +33,7 @@
   "author": "Abhay Pai",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0",
+    "bootstrap": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.1.2",
@@ -66,6 +64,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
+    "nodemon": "^1.19.4",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^7.1.0",
     "uglifyjs-webpack-plugin": "^2.2.0",

@@ -1,10 +1,13 @@
 {
-  "index.css": "./public/css/index.1571831423633.css",
-  "index.js": "public/js/index.1571831423633.js",
-  "vendor.css": "./public/css/vendor.1571831423633.css",
-  "vendor.js": "public/js/vendor.1571831423633.js",
+  "index.css": "./public/css/index.1572316986380.css",
+  "index.js": "public/js/index.1572316986380.js",
+  "vendor.css": "./public/css/vendor.1572316986380.css",
+  "vendor.js": "public/js/vendor.1572316986380.js",
   "public/images/Readme.md": "public/images/Readme.md",
   "public/images/ap-logo.jpg": "public/images/ap-logo.jpg",
   "public/images/favicon.ico": "public/images/favicon.ico",
+  "public/images/item-1.jpg": "public/images/item-1.jpg",
+  "public/images/item-2.jpg": "public/images/item-2.jpg",
+  "public/js/jquery.min.js": "public/js/jquery.min.js",
   "public/index.html": "public/index.html"
 }

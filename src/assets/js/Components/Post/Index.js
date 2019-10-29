@@ -33,7 +33,7 @@ const Post = (props) => {
             fetchAPI += 'posts/' + id;
             setPostType('single');
         } else {
-            fetchAPI += 'posts';
+            fetchAPI = '/api/v1/posts';
         }
 
         fetch(fetchAPI)

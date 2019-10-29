@@ -1,4 +1,7 @@
-const setContentType = (extname) => {
+const path = require('path');
+
+const setContentType = (filePath) => {
+    let extname = path.extname(filePath);
     let contentType = 'text/html';
 
     switch(extname) {

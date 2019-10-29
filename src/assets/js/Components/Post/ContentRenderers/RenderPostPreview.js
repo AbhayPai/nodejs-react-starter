@@ -7,7 +7,7 @@ const RenderPostPreview = (props) => {
             <h1
                 className='d-block display-4 mb-0 font-weight-light text-break text-center text-success post-summaries-title'
             >
-                Post Successfully Updated Preview
+                Post Successfully Updated
             </h1>
             <div
                 className='container pb-1 mt-1 mb-2 border clearfix post-summaries post-updated'

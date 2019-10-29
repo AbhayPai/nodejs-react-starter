@@ -1,5 +1,7 @@
+const path = require('path');
+
 const setFilePath = (config) => {
-    let filePath = config.path.join(
+    let filePath = path.join(
         __dirname,
         '..',
         'public',

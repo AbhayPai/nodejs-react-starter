@@ -22,7 +22,7 @@ const RenderPostEdit = (props) => {
                 {props.data.post.body.replace(/(\r\n|\n|\r)/gm, '')}
             </p>
             <hr />
-            <div className='float-right'>
+            <div className='text-right'>
                 <button
                     onClick={props.data.saveContent}
                     className='btn btn-primary'

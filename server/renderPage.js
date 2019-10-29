@@ -1,12 +1,15 @@
+const fs = require('fs');
+const path = require('path');
+
 const renderPage = (config) => {
-    config.fs.readFile(
+    fs.readFile(
         config.filePath,
         (err, content) => {
             // Page Not Found
             if(err) {
                 if(err.code === 'ENOENT') {
-                    config.fs.readFile(
-                        config.path.join(
+                    fs.readFile(
+                        path.join(
                             __dirname,
                             '..',
                             'public',
@@ -40,4 +43,5 @@ const renderPage = (config) => {
     );
 
 };
+
 module.exports = renderPage;
