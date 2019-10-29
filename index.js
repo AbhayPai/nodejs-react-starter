@@ -1,44 +1,45 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
+const path = require('path');
 const https = require('https');
-const renderPage = require('./server/renderPage');
-const setFilePath = require('./server/setFilePath');
-const setContentType = require('./server/setContentType');
 
-const server = http.createServer(
-    (req, res) => {
-        let url = req.url;
-        let filePath = setFilePath({
-            req
-        });
+app.use(express.static(__dirname + '/public'));
 
-        let contentType = setContentType(filePath);
+app.get('/api/v1/posts', (request, response) => {
+    callAPI((posts) => {
+        response.json(JSON.parse(posts));
+    }, 'posts');
+});
 
-        switch(url) {
-            case '/':
-                renderPage({
-                    res,
-                    filePath,
-                    contentType,
-                });
-                break;
-            case '/api/v1/posts':
-                callAPI(function(response){
-                    res.writeHead(200, {
-                        'Content-Type': 'application/json'
-                    });
-                    res.write(response);
-                    res.end();
-                }, 'posts');
-                break;
-            default:        
-                renderPage({
-                    res,
-                    filePath,
-                    contentType,
-                });
-        }
+app.get('/api/v1/posts/:id', (request, response) => {
+    let id = request.params.id;
+
+    callAPI((postById) => {
+        response.json(JSON.parse(postById));
+    }, `posts/${id}`);
+});
+
+app.get('/api/v1/users/:id', (request, response) => {
+    let id = request.params.id;
+
+    callAPI((postByUserId) => {
+        response.json(JSON.parse(postByUserId));
+    }, `posts?userId=${id}`);
+});
+
+
+app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.listen(port, (err) => {
+    if (err) {
+        return console.log('something bad happened', err);
     }
-);
+
+    console.log(`server is listening on ${port}`);
+});
 
 const callAPI = (callback, helper) => {
     https.get(`https://jsonplaceholder.typicode.com/${helper}`,
@@ -57,7 +58,3 @@ const callAPI = (callback, helper) => {
         }
     );
 };
-
-const PORT = process.env.PORT || 8080;
-
-server.listen(PORT);

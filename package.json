@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "localserver": "nodemon index",
+    "localstart": "nodemon index",
     "package": "webpack --colors --hide-modules --mode=production",
     "dev": "webpack --colors --hide-modules --watch --mode=development"
   },
@@ -34,10 +34,11 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.4.1",
+    "express": "^4.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.1.2",
     "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
     "redux": "^4.0.4"
   },
   "devDependencies": {
