@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index",
+    "start": "node index",
+    "localserver": "nodemon index",
     "package": "webpack --colors --hide-modules --mode=production",
     "dev": "webpack --colors --hide-modules --watch --mode=development",
     "localstart": "webpack --colors --hide-modules --mode=production && node index"
