@@ -23,6 +23,9 @@ const server = http.createServer(
                 break;
             case '/api/v1/posts':
                 callAPI(function(response){
+                    res.writeHead(200, {
+                        'Content-Type': 'application/json'
+                    });
                     res.write(response);
                     res.end();
                 }, 'posts');
