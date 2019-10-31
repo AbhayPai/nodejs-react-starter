@@ -1,4 +1,4 @@
-# Nodejs with Vue
+# Nodejs with React
 [Live Demo](https://ap-nodejs-react.herokuapp.com/)
 
 ## Modules used in this project are as follows:-
