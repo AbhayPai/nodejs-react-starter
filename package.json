@@ -1,7 +1,7 @@
 {
   "name": "ap-nodejs-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nodejs React.",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -73,5 +73,6 @@
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6",
     "webpack-manifest-plugin": "^2.0.4"
-  }
+  },
+  "homepage": "https://github.com/AbhayPai/ap-nodejs-react#readme"
 }

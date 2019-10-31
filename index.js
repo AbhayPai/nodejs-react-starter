@@ -28,7 +28,6 @@ app.get('/api/v1/users/:id', (request, response) => {
     }, `posts?userId=${id}`);
 });
 
-
 app.get('*', (request, response) => {
     response.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
