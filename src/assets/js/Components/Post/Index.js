@@ -24,16 +24,16 @@ const Post = (props) => {
     const [displayLoadMore, setDisplayLoadMore] = useState(true);
     const [postType, setPostType] = useState('all');
     const [postUpdate, setPostUpdate] = useState({});
-    let fetchAPI = 'https://jsonplaceholder.typicode.com/';
+    let fetchAPI = '/api/v1';
 
     useEffect(() => {
         if (props.location.pathname.indexOf('user') > 0) {
-            fetchAPI += 'posts?userId=' + id;
+            fetchAPI += '/users/' + id;
         } else if (props.location.pathname.indexOf('post') > 0) {
-            fetchAPI += 'posts/' + id;
+            fetchAPI += '/posts/' + id;
             setPostType('single');
         } else {
-            fetchAPI = '/api/v1/posts';
+            fetchAPI += '/posts';
         }
 
         fetch(fetchAPI)
