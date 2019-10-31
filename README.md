@@ -13,6 +13,7 @@
 * babel-eslint
 * babel-loader
 * babel-preset-env
+* babel-preset-react
 * babel-preset-stage-3
 * clean-webpack-plugin
 * copy-webpack-plugin
@@ -20,12 +21,13 @@
 * cssnano
 * eslint
 * eslint-config-standard
+* eslint-config-standard-react
 * eslint-loader
 * eslint-plugin-import
 * eslint-plugin-node
 * eslint-plugin-promise
+* eslint-plugin-react
 * eslint-plugin-standard
-* eslint-plugin-vue
 * file-loader
 * html-webpack-plugin
 * mini-css-extract-plugin
@@ -33,10 +35,8 @@
 * nodemon
 * optimize-css-assets-webpack-plugin
 * sass-loader
+* uglifyjs-webpack-plugin
 * url-loader
-* vue-loader
-* vue-style-loader
-* vue-template-compiler
 * webpack
 * webpack-cli
 * webpack-manifest-plugin
